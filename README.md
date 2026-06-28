@@ -1,18 +1,25 @@
+# WARNING
+humanornot.ai was shut down on 20th November 2025, and as a cause, this library isn't going to function properly anymore.  
+Also, the codebase of this project is a terrible mess that was coded in 2 days, and `Bot.GenerateBotId` method is an example of that.  
+I could think about doing essentially a v2 of this library with support of other sites, such as humanornot.so.  
+But I've lost interest in Human or Not, so this would never happen.
+## Please, do not use it.
+---
 Simple library for making bots in humanornot.ai written in C# 13/.NET 9
 ---
 
 # How to install
 
-Download the .dll package from release (Don't worry if you're on linux)<br/>
+Download the .dll package from release<br/>
 Add it as a refrence in your project<br/>
-Install Newthonsoft.JSON using NuGet<br/>
+Install Newtonsoft.JSON using NuGet<br/>
 Profit!
 
 ---
 
 # How to use
 
-Before doing this, make sure you running it in async mehod.
+Before doing this, make sure you running it in async method.
 
 Firstly, you need to create a bot instance: `Bot bot = new(userAgent);`
 userAgent - your user agent. If you're wondering how to get it, just google it.
@@ -42,7 +49,7 @@ while (chat.ChatData.IsActive)
 
 Also, if you need to consider using partner's (other side) reply, just call `Message msg = chat.GetPartnerMessage() ?? break;`, which will return a Message object, and now you can extract the real message by doing `msg.Text`.
 
-But after the conversation is ended, you need to guess whenever the partner was a bot or a human. You can do that by calling `chat.GuessPartner(chat.PredictPartner)`, which will always guess the right option.
+But after the conversation is ended, you need to guess wherever the partner was a bot or a human. You can do that by calling `chat.GuessPartner(chat.PredictPartner)`, which will always guess the right option.
 
 ---
 
